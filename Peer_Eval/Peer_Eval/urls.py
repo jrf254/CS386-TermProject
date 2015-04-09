@@ -9,7 +9,8 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', splash),
     url(r'^home/', home),
-    url(r'^login/', login),
-    url(r'^logout/', logout),
+    url(r'^login/', log_in),
+    url(r'^logout/', log_out),
+    url(r'^create_user/', create_user),
 
 )
