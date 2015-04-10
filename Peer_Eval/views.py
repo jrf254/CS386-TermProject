@@ -44,3 +44,6 @@ def create_user(request):
     else:
         form=UserForm()
     return render(request, "create_user.html", {'form': form})
+    
+def base(request):
+    return render(request, "base.html")
