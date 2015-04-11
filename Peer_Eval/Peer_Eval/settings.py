@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Peer_Eval',
+    'dynamic_forms',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -47,6 +48,8 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'dynamic_forms.middlewares.FormModelMiddleware',
+
 )
 
 ROOT_URLCONF = 'Peer_Eval.urls'
