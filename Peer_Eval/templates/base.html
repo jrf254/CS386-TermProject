@@ -8,7 +8,6 @@
     <link href="http://getbootstrap.com/examples/dashboard/dashboard.css" rel="stylesheet">
 
 <style>
-{% block css %}
 .navbar-custom {
   background-color: #ff00b4;
   border-color: #c132c3;
@@ -68,6 +67,7 @@
     background-color: #c132c3;
   }
 }
+{% block css %}
 {% endblock %}
 </style>
 <body>
@@ -94,16 +94,17 @@
         </div><!--/.nav-collapse -->
       </div>
  </nav>
+  <div class="container">
 {% block content %}
 {% endblock %}
+  </div>
 {% block javascript %}
 {% endblock %}
 
+<div class="navbar-brand">
+<nav class="navbar navbar-custom navbar-fixed-bottom"> </nav>
+</div>
 
-<nav class="navbar navbar-custom navbar-fixed-bottom">
-
-
- </nav>
  <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
