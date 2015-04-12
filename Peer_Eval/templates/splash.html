@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 {%  extends "base.html" %}
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
-Just to be SPLASH
-<a href="login">to login</a><br>
-<a href="/home/">to home</a>
-<br>
-<a href="/create_user">create account</a>
-</body>
-</html>
+{% block content %}
+ <div class="jumbotron">
+        <h1>Logistica Surveys</h1>
+        <p class="lead"> Welcome to Logistica Surveys, the Web application designed to help team members evaluate each other on current and submitted projects. In order to start an evaluation, a team member must have a registered account. </p>
+        <p><a class="btn btn-lg btn-primary" href="/create_user/" role="button">Register Now to Start Evaluating!</a></p>
+        <p class="lead"> Already registered, just sign in by clicking the button below.
+        </p>
+        <p><a class="btn btn-lg btn-primary" href="/login/" role="button">Sign In</a></p>
+      </div>
+{% endblock %}
