@@ -2,17 +2,19 @@
 {%  extends "base.html" %}
 
 {% block content %}
-    <div>
+<link href="http://getbootstrap.com/examples/signin/signin.css" >
+<div class = "container">
+ <form role="form" action="" method="post" >
+     <h3 class="form-signin-heading" >Create User</h3>
+    <div class = "form-group">
         <div>
-            <h3>Create User</h3>
-            <form action="" method="post">
                 {% csrf_token %}
                 {{ form.as_p }}
 
-               <input  type="submit">
+               <button type="submit" class="btn btn-primary">Submit</button>
 
-            </form>
         </div>
     </div>
+    </form>
+</div>
 {% endblock %}
-</html>
