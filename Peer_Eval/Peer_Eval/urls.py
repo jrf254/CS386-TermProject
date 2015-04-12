@@ -16,7 +16,7 @@ urlpatterns = patterns('',
     url(r'^logout/', log_out),
     url(r'^create_user/', create_user),
     url(r'^base/', base),
-   # url(r'^dynamic_forms/',include('dynamic_forms.urls', namespace='dynamic_forms')),
+   url(r'^dynamic_forms/',include('dynamic_forms.urls', namespace='dynamic_forms')),
 
 )
 urlpatterns += staticfiles_urlpatterns()
