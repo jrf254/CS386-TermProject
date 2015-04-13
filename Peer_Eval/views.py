@@ -16,6 +16,14 @@ def splash(request):
 def home(request):
     return render(request, "index.html")
 
+@login_required(login_url="/")
+def submitted(request):
+    return render(request, "completed_surveys.html")
+
+@login_required(login_url="/")
+def available(request):
+    return render(request, "Available_Surveys.html")
+
 
 def log_in(request):
     error = ""
