@@ -38,11 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'Peer_Eval',
     'dynamic_forms',
-<<<<<<< HEAD
-    'bootstrap3'
-=======
     'bootstrap3',
->>>>>>> origin/master
 )
 
 MIDDLEWARE_CLASSES = (

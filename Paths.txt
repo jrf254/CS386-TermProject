@@ -1,0 +1,6 @@
+Path for form.html is
+C:\Users\Tsosie\AppData\Roaming\Python\Python27\site-packages\dynamic_forms\templates\dynamic_forms\form.html
+
+
+Path for form_success.html
+C:\Users\Tsosie\AppData\Roaming\Python\Python27\site-packages\dynamic_forms\templates\dynamic_forms\form_success.html

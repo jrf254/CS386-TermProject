@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% block content %}
+{% load bootstrap3 %}
+<h2>{{ name }}</h2>
+<form class="form-group" method="post" action="{{ submit_url }}">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    <button type="submit">{% trans "Submit" %}</button>
+</form>
+{% endblock %}
