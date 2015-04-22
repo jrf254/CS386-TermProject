@@ -14,10 +14,13 @@ def splash(request):
 
 @login_required(login_url="/")
 def home(request):
+    cur_user = request.user
+    print cur_user
     return render(request, "index.html")
 
 @login_required(login_url="/")
 def submitted(request):
+
     return render(request, "completed_surveys.html")
 
 @login_required(login_url="/")

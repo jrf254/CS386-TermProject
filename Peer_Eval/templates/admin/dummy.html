@@ -6,8 +6,8 @@
     <title>Logistica {% block title %}{% endblock %}</title>
    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="http://getbootstrap.com/examples/dashboard/dashboard.css" rel="stylesheet">
-     <link href="signin.css" rel="stylesheet">
-  
+{#     <link href="signin.css" rel="stylesheet">#}
+{% block css_link %}{% endblock %}
 <link rel="shortcut icon" href="http://www.iconj.com/ico/f/4/f4o0gexcl9.ico" type="image/x-icon" />
 
 <style>
@@ -91,24 +91,24 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class=""><a class= "btn" href="/home/">Home</a></li>
-              {% if perms.auth.change_user  %}
+                          {% if perms.auth.change_user  %}
           <li class=""><a class= "btn" href="/manageradmin/">Admin</a></li>
               {% elif perms.Peer_Eval.add_project %}
             <li class=""><a class= "btn" href="/projectadmin/">Admin</a></li>
               {% endif %}
 
-            <li class=""><a class="btn " href="/logout" role="button">Logout &raquo;</a></li></p>
-          
+              <li class=""><a class="btn " href="/logout" role="button">Logout &raquo;</a></li></p>
+
             </li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
  </nav>
 
+<br><br>
   <div class="container">
 {% block content %}
 {% endblock %}
-
   </div>
 {% block javascript %}
 {% endblock %}
