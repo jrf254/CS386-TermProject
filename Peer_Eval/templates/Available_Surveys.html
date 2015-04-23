@@ -22,30 +22,26 @@
         <thead>
           <tr>
             <th>#</th>
-            <th>Survey Name</th>
+{#            <th>Survey Name</th>#}
             <th>Project Name </th>
             <th>Due Date </th>
           </tr>
         </thead>
         <tbody>
+        {% for i in survey %}
           <tr>
-            <th scope="row">1</th>
-            <td><a  href="/Mid/" role="button">Mid Semester Survey</a></td>
-            <td>Evaluation</td>
-            <td>Apr-1-2015</td>
+            <th scope="row">{{ forloop.counter }}</th>
+            <td><a  href="{{ i.url }}" role="button">{{ i.name }}</a></td>
+{#            <td>Final Project</td>#}
+            <td>{{ i.enddate }}</td>
           </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td><a  href="/Final/" role="button">Final Survey</a></td>
-            <td>Final Project</td>
-            <td>May-3-2015</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
+        {% endfor %}
+{#          <tr>#}
+{#            <th scope="row">3</th>#}
+{#            <td></td>#}
+{#            <td></td>#}
+{#            <td></td>#}
+{#          </tr>#}
         </tbody>
       </table>
 

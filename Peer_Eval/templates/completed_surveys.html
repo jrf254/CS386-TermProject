@@ -22,30 +22,38 @@
         <thead>
           <tr>
             <th>#</th>
-            <th>Survey Name</th>
+{#            <th>Survey Name</th>#}
             <th>Project Name </th>
-            <th>Completion Date </th>
+            <th>End Date  </th>
           </tr>
         </thead>
         <tbody>
+                {% for i in survey %}
           <tr>
-            <th scope="row">1</th>
-            <td><a  href="/dynamic_forms/show/7MpS6rKrxXariaI1VImgUk4C/" role="button">Project 1</a></td>
-            <td>Project 1: Virtual Worlds</td>
-            <td>Feb-13-2015</td>
+            <th scope="row">{{ forloop.counter }}</th>
+            <td>{{ i.name }}</td>
+{#            <td>Final Project</td>#}
+            <td>{{ i.enddate }}</td>
           </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td><a  href="/dynamic_forms/show/IK8FDA1TQv6g2Ysqa9QsyYqO/" role="button">Project 2</a></td>
-            <td>Project 2: Database Creation</td>
-            <td>Mar-24-2015</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
+        {% endfor %}
+{#          <tr>#}
+{#            <th scope="row">1</th>#}
+{#            <td><a  href="/dynamic_forms/show/7MpS6rKrxXariaI1VImgUk4C/" role="button">Project 1</a></td>#}
+{#            <td>Project 1: Virtual Worlds</td>#}
+{#            <td>Feb-13-2015</td>#}
+{#          </tr>#}
+{#          <tr>#}
+{#            <th scope="row">2</th>#}
+{#            <td><a  href="/dynamic_forms/show/IK8FDA1TQv6g2Ysqa9QsyYqO/" role="button">Project 2</a></td>#}
+{#            <td>Project 2: Database Creation</td>#}
+{#            <td>Mar-24-2015</td>#}
+{#          </tr>#}
+{#          <tr>#}
+{#            <th scope="row">3</th>#}
+{#            <td></td>#}
+{#            <td></td>#}
+{#            <td></td>#}
+{#          </tr>#}
         </tbody>
       </table>
 

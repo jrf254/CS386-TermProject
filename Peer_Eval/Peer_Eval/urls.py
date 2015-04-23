@@ -2,10 +2,11 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from views import *
 from Peer_Eval.admin import manager_admin, project_admin
-
+#admin.autodiscover()
 from django.conf.urls.static import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.contrib.auth import views as auth_views
+
 urlpatterns = patterns('',
     # Examples
     # lo

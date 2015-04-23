@@ -21,5 +21,5 @@ class ProjectAdmin(AdminSite):
 
 project_admin = ProjectAdmin(name='projectadmin')
 project_admin.register(FormModel, FormModelAdmin)
-#project_admin.register(FormModelData, FormModelDataAdmin)
+project_admin.register(FormModelData, FormModelDataAdmin)
 project_admin.register(project)
