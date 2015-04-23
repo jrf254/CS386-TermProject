@@ -1,5 +1,7 @@
 from django.contrib import admin
 from django.contrib.admin import AdminSite
+from dynamic_forms.admin import FormModel,FormModelAdmin,FormModelData,FormModelDataAdmin
+
 from .models import *
 
 admin.site.register(project)
@@ -9,16 +11,15 @@ class ManagerAdmin(AdminSite):
 manager_admin = ManagerAdmin(name='manageradmin')
 manager_admin.register(User)
 manager_admin.register(Group)
-manager_admin.register(FormModel)
+manager_admin.register(FormModel, FormModelAdmin)
+manager_admin.register(FormModelData, FormModelDataAdmin)
 manager_admin.register(project)
-manager_admin.register(FormModelData)
+
 
 class ProjectAdmin(AdminSite):
-    print AdminSite
     login_template = 'login.html'
 
-#    index_template = 'admin_base.html'
-
 project_admin = ProjectAdmin(name='projectadmin')
-project_admin.register(FormModel)
+project_admin.register(FormModel, FormModelAdmin)
+#project_admin.register(FormModelData, FormModelDataAdmin)
 project_admin.register(project)
